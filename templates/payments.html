@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="" method="POST">
+    {% csrf_token %}
+
+    <input type="number" name="amount" placeholder="Enter Amount"><br><br>
+    <input type="text" name="phone" placeholder="Enter Phone Number"><br><br>
+    <input type="submit" value="Pay">
+</form>
+</body>
+</html>
