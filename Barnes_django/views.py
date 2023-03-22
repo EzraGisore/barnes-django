@@ -39,7 +39,8 @@ def register(request):
     return render(request,"register.html")
 def home(request):
     return render(request,"index (copy).html")
-
+def dash(request):
+    return render(request,"Member Dashboard.html")
 def register_page(request):
     data = User.objects.all()
     context = {'data': data}
@@ -58,9 +59,9 @@ def insertdata(request):
 
         query = User(name=name, gender=gender,age=age,email=email, phone=phone, regID=regID, membership=membership, amount=amount,)
         query.save()
-        return redirect('login')
+        return redirect('dash')
 
-    return render(request, 'login.html')
+    return render(request, 'Member Dashboard.html')
 
 
 def delete_data(request, id):

@@ -3,8 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <title>Barnes Dashboard</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static "bootstrap.css" %}">
+    <link rel="stylesheet" href="{% static "style.css" %}">
 </head>
 <body>
+<div class="card" style="margin-left:50px;width: 400px;">
+  <img src="{% static "img/sm.jpg" %}" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Online Bookstore</h5>
+    <p class="card-text">We have a variety of books to fit any age,taste & genre. Daily sales to favour your budget.Purchase books from our website and have them delivered right to your doorstep. We have an express delivery service which ensures customer satisfaction through our one-day shipping policy.</p>
+    <a href="#" class="btn btn-primary">Shop</a>
+  </div>
+</div>
+<div class="card" style="margin-left: 500px;margin-top:-887px;width: 400px;">
+  <img src="{% static "img/bc.jpg" %}" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Book Clubs</h5>
+    <p class="card-text">We have registered a total of 22 book clubs based on genre. Members meet up at their own convenience to discuss a different book every week. </p>
+    <a href="#" class="btn btn-primary">Join</a>
+  </div>
+</div>
+<div class="card" style="margin-left:50px;margin-top:100px;width:400px;">
+  <img src="{% static "img/kd.jpg" %}" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Junior Readers</h5>
+    <p class="card-text">This offers children an opportunity to enjoy reading in a fun, regulated environment under close supervision.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
+<div class="card" style="margin-left: 500px;margin-top:-792px;width: 400px;">
+  <img src="{% static "img/tr.jpg" %}" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Awards Club</h5>
+    <p class="card-text">Long term members can receive Barne Points every month which they can redeem for a book or other book accessories.</p>
+    <a href="#" class="btn btn-primary">Go Awards</a>
+  </div>
+</div>
+<div class="card" style="margin-left:50px;margin-top:100px;width:400px;">
+  <img src="{% static "img/bbook.jpg" %}" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Book of The Month</h5>
+    <p class="card-text">Choose a book of your liking from a curated list featuring indie authors every month.</p>
+    <a href="#" class="btn btn-primary">BoM</a>
+  </div>
+</div>
 
 </body>
 </html>
