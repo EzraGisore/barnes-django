@@ -89,16 +89,16 @@
                                           <a class="nav-link" href="index%20(copy).html">Home</a>
                                        </li>
                                        <li class="nav-item">
-                                          <a class="nav-link" href="about.html">About</a>
+                                          <a class="nav-link" href="{% url 'about' %}">About</a>
                                        </li>
                                        <li class="nav-item">
-                                          <a class="nav-link" href="project.html">Services</a>
+                                          <a class="nav-link" href="{% url 'project'%}">Services</a>
                                        </li>
                                        <li class="nav-item">
-                                          <a class="nav-link" href="staff.html">fOUNDERS</a>
+                                          <a class="nav-link" href="{% url 'staff' %}">fOUNDERS</a>
                                        </li>
                                        <li class="nav-item">
-                                          <a class="nav-link" href="contact.html">Contact Us</a>
+                                          <a class="nav-link" href="{% url 'contact' %}">Contact Us</a>
                                        </li>
                                     </ul>
                                  </div>
@@ -133,7 +133,7 @@
                                  <div class="build_box">
                                     <h1>A bibliophile's paradise.</h1>
                                     <p>Join the largest community of readers in the country.</p>
-                                    <a class="read_more conatct_btn" href="{% url 'login' %}" role="button">Register</a>
+                                    <a class="read_more conatct_btn" href="{% url 'register' %}" role="button">Register</a>
                                  </div>
                               </div>
                            </div>
@@ -163,7 +163,7 @@
                                  <div class="build_box">
                                     <h1>Become a Platinum Member to enjoy special privileges.</h1>
                                     <p>Enjoy a freely issued book haul every month.</p>
-                                    <a class="read_more conatct_btn" href="contact.html" role="button">Contact Us</a>
+                                    <a class="read_more conatct_btn" href="{% url 'contact' %}" role="button">Contact Us</a>
                                  </div>
                               </div>
                            </div>
@@ -173,11 +173,11 @@
                </div>
                <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
                <i class="fa fa-angle-left" aria-hidden="true"></i>
-               <span class="sr-only">Previous</span>
+               <span class="sr-only"> < </span>
                </a>
                <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
                <i class="fa fa-angle-right" aria-hidden="true"></i>
-               <span class="sr-only">Next</span>
+               <span class="sr-only"> > </span>
                </a>
             </div>
          </section>
@@ -186,26 +186,7 @@
       <!-- three_box -->
       <div class="three_box">
          <div class="container">
-            <div class="row">
-               <div class="col-md-3">
-                  <div id="text_hover" class="const text_align_center">
-                     <i><img src="{% static "img/sil.png" %}" alt="#"/></i>
-                     <span>Become a Member</span>
-                  </div>
-               </div>
-               <div class="col-md-3">
-                  <div id="text_hover" class="const text_align_center">
-                     <i><img src="{% static "img/pl.jpg" %}" alt="#"/></i>
-                     <span>Become a PLATINUM member</span>
-                  </div>
-               </div>
-               <div class="col-md-3">
-                  <div id="text_hover" class="const text_align_center">
-                     <i><img src="{% static "img/buy.jpg" %}" alt="#"/></i>
-                     <span>Shop in the largest online bookstore.</span>
-                  </div>
-               </div>
-            </div>
+
          </div>
       </div>
       <!-- end three_box -->
@@ -217,7 +198,7 @@
                   <div class="titlepage">
                      <h2>About Barne's</h2>
                      <span>We are a company which prides itself in providing reading resources to small communities. We are branched out in over 100 outlets, each one equipped with a library, a children reading area, a book store, 5 book club lounges and 2 platinum member lounges. We also have the largest collection of paperbacks, audio books and ebooks up for sale on our online platforms. Our stations are open every day and all are welcome.   </span>
-                     <a class="read_more" href="about.html"> Read More</a>
+                     <a class="read_more" href="{% url 'about' %}"> Read More</a>
                   </div>
                </div>
                <div class="col-md-5">
@@ -259,8 +240,8 @@
                                              <figure><img src="{% static "img/sm.jpg" %}" alt="#"/></figure>
                                           </div>
                                           <div id="pro_ho" class="project_text">
-                                             <h3>Shop in Our<br>Bookstore</h3>
-                                             <p>We have a variety of books to fit any age,taste & genre. Daily sales to favour your budget.</p>
+                                             <h3>Barne's Library</h3>
+                                             <p>Visit our libraries at our local branches and find a vast selection of books to borrow.</p>
                                           </div>
                                        </div>
                                     </div>
@@ -278,69 +259,19 @@
                                     <div class="col-md-4">
                                        <div class="project">
                                           <div class="project_img">
-                                             <figure><img src="{% static "img/pt.jpg" %}" alt="#"/></figure>
-                                          </div>
-                                          <div id="pro_ho" class="project_text">
-                                             <h3>Platinum Membership<br></h3>
-                                             <p>This grants you a discount on every book purchase. Platinum members are also granted special edition books at discounted prices. Furthermore, Platinum Members receive a free, specialised book haul evry month.</p>
-                                          </div>
-                                       </div>
-                                    </div>
-                                 </div>
-                              </div>
-                           </div>
-                        </div>
-                        <div class="carousel-item">
-                           <div class="container-fluid">
-                              <div class="carousel-caption relative3">
-                                 <div class="row">
-                                    <div class="col-md-4">
-                                       <div class="project">
-                                          <div class="project_img">
-                                             <figure><img src="{% static "img/sp.jpg" %}" alt="#"/></figure>
-                                          </div>
-                                          <div id="pro_ho" class="project_text">
-                                             <h3>Shop from our<br>online store.</h3>
-                                             <p>Purchase books from our website and have them delivered right to your doorstep. We have an express delivery service which ensures customer satisfaction through our one-day shipping policy.</p>
-                                          </div>
-                                       </div>
-                                    </div>
-                                    <div class="col-md-4">
-                                       <div class="project">
-                                          <div class="project_img">
                                              <figure><img src="{% static "img/kd.jpg" %}" alt="#"/></figure>
                                           </div>
                                           <div id="pro_ho" class="project_text">
-                                             <h3>Register your<br>child into our junior readers programs.</h3>
+                                             <h3>Junior Readers</h3>
                                              <p>This offers children an opportunity to enjoy reading in a fun, regulated environment under close supervision.</p>
                                           </div>
                                        </div>
                                     </div>
-                                    <div class="col-md-4">
-                                       <div class="project">
-                                          <div class="project_img">
-                                             <figure><img src="{% static "img/tr.jpg" %}" alt="#"/></figure>
-                                          </div>
-                                          <div id="pro_ho" class="project_text">
-                                             <h3>Receive awards<br> from our Barnes awards club.</h3>
-                                             <p>Long term members can receive Barne Points every month which they can redeem for a book or other book accessories.</p>
-                                          </div>
-                                       </div>
-                                    </div>
                                  </div>
                               </div>
                            </div>
                         </div>
-                        <div
-                        </div>
-                        <a class="carousel-control-prev" href="#proj" role="button" data-slide="prev">
-                        <i class="fa fa-arrow-left" aria-hidden="true"></i>
-                        <span class="sr-only">Previous</span>
-                        </a>
-                        <a class="carousel-control-next" href="#proj" role="button" data-slide="next">
-                        <i class="fa fa-arrow-right" aria-hidden="true"></i>
-                        <span class="sr-only">Next</span>
-                        </a>
+
                      </div>
                   </div>
                </div>
@@ -509,11 +440,7 @@
                      <img src="{% static "img/buy.jpg" %} " alt="#"/>
                   </div>
                </div>
-               <div class="col-md-6">
-                  <div class="truck_img1">
-                     <img src="{% static "img/pl.jpg" %}" alt="#"/>
-                  </div>
-               </div>
+
             </div>
          </div>
       </div>
@@ -601,11 +528,11 @@ We are a company which prides itself in providing reading resources to small com
                   <div class="col-lg-2 offset-lg-1 col-md-6">
                      <h3>QUICK LINKS</h3>
                      <ul class="link_menu">
-                        <li><a href="registration.html">Home</a></li>
-                        <li><a href="about.html"> About</a></li>
-                        <li><a href="project.html">Services</a></li>
-                        <li><a href="staff.html">Founders</a></li>
-                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="{% url 'home' %}">Home</a></li>
+                        <li><a href="{% url 'about' %}"> About</a></li>
+                        <li><a href="{% url 'project' %}">Services</a></li>
+                        <li><a href="{% url 'staff' %}">Founders</a></li>
+                        <li><a href="{% url 'contact' %}">Contact Us</a></li>
                      </ul>
                   </div>
                   <div class=" col-lg-3 col-md-6">

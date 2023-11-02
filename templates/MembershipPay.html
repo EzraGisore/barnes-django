@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Barne's Pay</title>
+    {% load static %}
+      <link rel="stylesheet" href="{% static "bootstrap.min.css" %}">
+      <!-- style css -->
+      <link rel="stylesheet" href="{% static "style11.css" %}">
+      <!-- Responsive-->
+      <link rel="stylesheet" href="{% static "responsive.css"%}">
+      <!-- fevicon -->
+      <link rel="icon" href="{% static "img/fevicon.png" %}" type="image/gif" />
+      <!-- Scrollbar Custom CSS -->
+      <link rel="stylesheet" href="{% static "jquery.mCustomScrollbar.min.css" %}">
+      <!-- Tweaks for older IEs-->
+      <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
+</head>
+<body>
+<section>
+  <div class="d-flex justify-content-between align-items-center mb-5">
+    <div class="d-flex flex-row align-items-center">
+      <h4 class="text-uppercase mt-1">Eligible</h4>
+      <span class="ms-2 me-3">Pay</span>
+    </div>
+    <a href="#!">Cancel and return to the website</a>
+  </div>
+
+  <div class="row">
+    <div class="col-md-7 col-lg-7 col-xl-6 mb-4 mb-md-0">
+      <h5 class="mb-0 text-success">KES 1500.00</h5>
+      <h5 class="mb-3">Membership</h5>
+      <div>
+        <hr />
+        <div class="d-flex justify-content-between align-items-center">
+          <div class="d-flex flex-row mt-1">
+            <h6>Barne's Awards Club</h6>
+            <h6 class="fw-bold text-success ms-1">KES 500.00</h6>
+          </div>
+          <div class="d-flex flex-row align-items-center text-primary">
+            <span class="ms-1">Add Payment card</span>
+          </div>
+        </div>
+
+        <div class="d-flex flex-column mb-3">
+          <div class="btn-group-vertical" role="group" aria-label="Vertical button group">
+            <input type="radio" class="btn-check" name="options" id="option1" autocomplete="off" />
+            <label class="btn btn-outline-primary btn-lg" for="option1">
+              <div class="d-flex justify-content-between">
+                <span>VISA </span>
+
+              </div>
+            </label>
+
+
+            <input type="radio" class="btn-check" name="options" id="option2" autocomplete="off" checked />
+            <label class="btn btn-outline-primary btn-lg" for="option2">
+              <div class="d-flex justify-content-between">
+                <span>MPESA </span>
+              </div>
+            </label>
+          </div>
+        </div>
+
+          <a class="btn btn-success btn-lg btn-block" href="{% url 'pay' %}" role="button">Proceed to payment</a>
+      </div>
+    </div>
+    <div class="col-md-5 col-lg-4 col-xl-4 offset-lg-1 offset-xl-2">
+      <div class="p-3" style="background-color: #eee;">
+        <span class="fw-bold">Order Recap</span>
+
+        <div class="d-flex justify-content-between mt-2">
+          <span class="lh-sm">
+            Membership
+          </span>
+          <span>KES 1500.00</span>
+        </div>
+        <div class="d-flex justify-content-between mt-2">
+          <span class="lh-sm">
+            Barne's Awards Club</span>
+          <span>KES 500.00</span>
+        </div>
+        <hr />
+        <hr />
+        <div class="d-flex justify-content-between mt-2">
+          <span>Total </span> <span class="text-success">KES 2000.00</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</body>
+</html>

@@ -26,6 +26,11 @@ urlpatterns = [
     path('register/', views.register, name='register'),
     path('home/', views.home, name='home'),
     path('', views.insertdata, name='enter'),
-    path('lipa/', views.lipamimi, name='payuser'),
-    path('dash/', views.dash, name='dash')
+    path('pay/', views.pay, name='pay'),
+    path('dash/', views.dash, name='dash'),
+    path('memberpay/', views.memberpay, name='memberpay'),
+    path('about/', views.about, name='about'),
+    path('project/', views.project, name='project'),
+    path('staff/', views.staff, name='staff'),
+    path('contact/', views.contact, name='contact')
 ]

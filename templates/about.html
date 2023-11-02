@@ -12,15 +12,16 @@
       <meta name="description" content="">
       <meta name="author" content="">
       <!-- bootstrap css -->
-      <link rel="stylesheet" href="css/bootstrap.min.css">
+      {% load static %}
+      <link rel="stylesheet" href="{% static "bootstrap.min.css" %}">
       <!-- style css -->
-      <link rel="stylesheet" href="css/style.css">
+      <link rel="stylesheet" href="{% static "style11.css" %}">
       <!-- Responsive-->
-      <link rel="stylesheet" href="css/responsive.css">
+      <link rel="stylesheet" href="{% static "responsive.css"%}">
       <!-- fevicon -->
-      <link rel="icon" href="images/fevicon.png" type="image/gif" />
+      <link rel="icon" href="{% static "img/fevicon.png" %}" type="image/gif" />
       <!-- Scrollbar Custom CSS -->
-      <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
+      <link rel="stylesheet" href="{% static "jquery.mCustomScrollbar.min.css" %}">
       <!-- Tweaks for older IEs-->
       <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
@@ -31,9 +32,7 @@
    <!-- body -->
    <body class="main-layout inner_page">
       <!-- loader  -->
-      <div class="loader_bg">
-         <div class="loader"><img src="images/loading.gif" alt="#"/></div>
-      </div>
+      
       <!-- end loader -->
       <!-- header -->
       <header class="full_bg">
@@ -85,19 +84,19 @@
                                  <div class="collapse navbar-collapse" id="navbarsExample04">
                                     <ul class="navbar-nav mr-auto">
                                        <li class="nav-item">
-                                          <a class="nav-link" href="registration.html">Home</a>
+                                          <a class="nav-link" href="{% url 'home' %}">Home</a>
                                        </li>
                                        <li class="nav-item active">
-                                          <a class="nav-link" href="about.html">About</a>
+                                          <a class="nav-link" href="{% url 'about' %}">About</a>
                                        </li>
                                        <li class="nav-item">
-                                          <a class="nav-link" href="project.html">Services</a>
+                                          <a class="nav-link" href="{% url 'project' %}">Services</a>
                                        </li>
                                        <li class="nav-item">
-                                          <a class="nav-link" href="staff.html">Founders</a>
+                                          <a class="nav-link" href="{% url 'staff' %}">Founders</a>
                                        </li>
                                        <li class="nav-item">
-                                          <a class="nav-link" href="contact.html">Contact Us</a>
+                                          <a class="nav-link" href="{% url 'contact' %}">Contact Us</a>
                                        </li>
                                     </ul>
                                  </div>
@@ -141,7 +140,7 @@
                </div>
                <div class="col-md-5">
                   <div class="about_img">
-                     <figure><img src="images/bie.jpg" alt="#"/></figure>
+                     <figure><img src="{% static "img/bie.jpg" %}" alt="#"/></figure>
                   </div>
                </div>
             </div>
@@ -154,7 +153,7 @@
             <div class="container">
                <div class="row">
                   <div class=" col-lg-3 col-md-6">
-                     <a class="logo_bottom"><img src="images/barnes.png" alt="#"/></a>
+                     <a class="logo_bottom"><img src="{% static "img/barnes.png" %}" alt="#"/></a>
                      <p class="many">
 
 About Barne's
@@ -164,20 +163,20 @@ We are a company which prides itself in providing reading resources to small com
                   <div class="col-lg-2 offset-lg-1 col-md-6">
                      <h3>QUICK LINKS</h3>
                      <ul class="link_menu">
-                        <li><a href="registration.html">Home</a></li>
-                        <li><a href="about.html"> About</a></li>
-                        <li><a href="project.html">Services</a></li>
-                        <li><a href="staff.html">Founders</a></li>
-                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="{% url 'home' %}">Home</a></li>
+                        <li><a href="{% url 'about' %}"> About</a></li>
+                        <li><a href="{% url 'project' %}">Services</a></li>
+                        <li><a href="{% url 'staff' %}">Founders</a></li>
+                        <li><a href="{% url 'contact' %}">Contact Us</a></li>
                      </ul>
                   </div>
                   <div class=" col-lg-3 col-md-6">
                      <h3>INSTAGRAM FEEDS</h3>
                      <ul class="insta text_align_left">
-                        <li><img src="images/bie.jpg" alt="#"/></li>
-                        <li><img src="images/lib.jpg" alt="#"/></li>
-                        <li><img src="images/bookstore.jpg" alt="#"/></li>
-                        <li><img src="images/why.jpg alt="#"/></li>
+                        <li><img src="{% static "img/bie.jpg" %}" alt="#"/></li>
+                        <li><img src="{% static "img/lib.jpg" %}" alt="#"/></li>
+                        <li><img src="{% static "img/bookstore.jpg" %}" alt="#"/></li>
+                        <li><img src="{% static "img/why.jpg" %} alt="#"/></li>
                      </ul>
                   </div>
                   <div class=" col-lg-3 col-md-6 ">

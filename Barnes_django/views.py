@@ -19,12 +19,12 @@ def oauth_success(request):
     return JsonResponse(r, safe=False)
 
 
-def lipamimi(request):
+def pay(request):
     if request.method == "POST":
         phone_number = request.POST.get('phone')
-        amount = request.POST.get('amount')
+        amount = 1
         amount = int(amount)
-        account_reference = 'BarnesClub'
+        account_reference = 'Barnes'
         transaction_desc = 'STK Push Description'
         callback_url = stk_push_callback_url
         r = cl.stk_push(phone_number, amount, account_reference, transaction_desc, callback_url)
@@ -37,6 +37,14 @@ def login(request):
     return render(request,"login.html")
 def register(request):
     return render(request,"register.html")
+def about(request):
+    return render(request,"about.html")
+def project(request):
+    return render(request,"project.html")
+def staff(request):
+    return render(request,"staff.html")
+def contact(request):
+    return render(request,"contact.html")
 def home(request):
     return render(request,"index (copy).html")
 def dash(request):
@@ -95,3 +103,5 @@ def updatedata(request, id):
     d=User.objects.get(id=id)
     context = {"d": d}
     return render(request, 'edit.html', context)
+def memberpay(request):
+    return render(request,"MembershipPay.html")
