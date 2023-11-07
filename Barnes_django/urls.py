@@ -19,18 +19,25 @@ from . import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('delete/<id>', views.delete_data, name= 'deletedata'),
-    path('update/<id>', views.updatedata, name='updatedata'),
+##    path('delete/<id>', views.delete_data, name= 'deletedata'),
+  ##  path('update/<id>', views.updatedata, name='updatedata'),
     path('login/', views.register_page, name='login'),
-    path('insert', views.insertdata, name='insert'),
+##    path('insert', views.insertdata, name='insert'),
     path('register/', views.register, name='register'),
     path('home/', views.home, name='home'),
-    path('', views.insertdata, name='enter'),
+##    path('', views.insertdata, name='enter'),
     path('pay/', views.pay, name='pay'),
     path('dash/', views.dash, name='dash'),
     path('memberpay/', views.memberpay, name='memberpay'),
     path('about/', views.about, name='about'),
     path('project/', views.project, name='project'),
     path('staff/', views.staff, name='staff'),
-    path('contact/', views.contact, name='contact')
+    path('contact/', views.contact, name='contact'),
+    path('dashb/', views.dashb, name='dashb'),
+    path('bookclub/', views.bc, name='bc'),
+    path('deletebc/<id>', views.delete_bcdata, name= 'deletebcdata'),
+    path('updatebc/<id>', views.update_bcdata, name='updatebcdata'),
+    path('insertbc', views.insertbcdata, name='insertbcdata'),
+    path('bcschedule/', views.bcschedule, name='bcschedule'),
+
 ]
