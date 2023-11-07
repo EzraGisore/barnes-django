@@ -111,6 +111,14 @@ def memberpay(request):
     return render(request,"MembershipPay.html")
 def bcschedule(request):
     return render(request,"bcschedule.html")
+def junior(request):
+    return render(request,"junior.html")
+def jrschedule(request):
+    return render(request,"jrschedule.html")
+def awards(request):
+    return render(request,"awards.html")
+def library(request):
+    return render(request,"library.html")
 def insertbcdata(request):
     if request.method == "POST":
         name = request.POST.get('name')
@@ -129,7 +137,7 @@ def delete_bcdata(request, id):
     d = BcMember.objects.get(id=id)
     d.delete()
     return redirect('login')
-    return render(request, 'login.html')
+    return render(request, '/')
 def update_bcdata(request, id):
     if request.method == "POST":
         name = request.POST.get('name')
@@ -152,3 +160,18 @@ def update_bcdata(request, id):
     d=BcMember.objects.get(id=id)
     context = {"d": d}
     return render(request, 'edit.html', context)
+def insertjrdata(request):
+    if request.method == "POST":
+        parent_name = request.POST.get('parent_name')
+        junior_name = request.POST.get('junior_name')
+        gender = request.POST.get('gender')
+        age = request.POST.get('age')
+        parent_email = request.POST.get('parent_email')
+        parent_phone = request.POST.get('parent_phone')
+
+
+        query = JrMember(parent_name=parent_name, junior_name= junior_name, gender=gender,age=age,parent_email=parent_email, parent_phone=parent_phone,)
+        query.save()
+        return redirect('junior')
+
+    return render(request, 'junior.html')

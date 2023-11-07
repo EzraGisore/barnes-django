@@ -39,5 +39,11 @@ urlpatterns = [
     path('updatebc/<id>', views.update_bcdata, name='updatebcdata'),
     path('insertbc', views.insertbcdata, name='insertbcdata'),
     path('bcschedule/', views.bcschedule, name='bcschedule'),
+    path('jrschedule/', views.jrschedule, name='jrschedule'),
+    path('junior/', views.junior, name='junior'),
+    path('insertjr', views.insertjrdata, name='insertjrdata'),
+    path('awards/', views.awards, name='awards'),
+    path('library/', views.library, name='library')
+
 
 ]

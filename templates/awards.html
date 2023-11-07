@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Barne's Book Club</title>
+    <title>Awards Club</title>
     {% load static %}
       <link rel="stylesheet" href="{% static "bootstrap.css" %}">
       <link rel="stylesheet" href="{% static "bootstrap.min.css" %}">
@@ -73,52 +73,7 @@
          <!-- end header -->
          <!-- banner -->
 </header><br><br><br>
-<section class="vh-100">
-  <div class="container py-5 h-100">
-    <div class="row d-flex align-items-center justify-content-center h-100">
-      <div class="col-md-8 col-lg-7 col-xl-6">
-        <img src="{% static "img/bookclub.jpg" %}"
-          class="img-fluid" alt="Phone image">
-      </div>
-      <div class="col-md-7 col-lg-5 col-xl-5 offset-xl-1">
-        <form action="/insertbc" method="post">
-            {% csrf_token %}
-          <!-- Email input -->
-          <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Name" name="name" required>
-          </div>
-          <div class="form-group mt-2">
-                        <select id="gender" name="gender" class="form-control" required>
-                            <option selected>select gender</option>
-                            <option value="male">Male</option>
-                            <option value="female">Female</option>
-                            <option value="rns">Rather not say</option>
-                        </select>
-          </div>
-          <div class="form-group">
-                        <input type="number" class="form-control  mt-2" placeholder="Age" name="age" required>
-
-          </div>
-          <div class="form-group">
-                        <input type="email" class="form-control  mt-2" placeholder="Email" name="email" required>
-          </div>
-          <div class="form-group">
-                        <input type="number" class="form-control  mt-2" placeholder="Phone" name="phone" required>
-
-          </div>
-
-
-
-
-            <a href="{% url 'bcschedule' %}" class="btn btn-primary">Join</a>
-
-
-
-        </form>
-      </div>
-    </div>
-  </div>
-</section>
+<h2>Congratulations!</h2>
+<h4>You have received 100 Barne points!</h4>
 </body>
-
 </html>
