@@ -31,11 +31,7 @@
    </head>
    <!-- body -->
    <body class="main-layout">
-      <!-- loader  -->
-      <div class="loader_bg">
-         <div class="loader"><img src="{% static "img/loading.gif" %}" alt="#"/></div>
-      </div>
-      <!-- end loader -->
+
       <!-- header -->
       <header class="full_bg">
          <!-- header inner -->
@@ -110,7 +106,7 @@
                                  <div class="build_box">
                                     <h1>A bibliophile's paradise.</h1>
                                     <p>Join the largest community of readers in the country.</p>
-                                    <a class="read_more conatct_btn" href="{% url 'register' %}" role="button">Register</a>
+                                    <a class="read_more conatct_btn" href="{% url 'signup' %}" role="button">Register</a>
                                  </div>
                               </div>
                            </div>
@@ -125,7 +121,7 @@
                                  <div class="build_box">
                                     <h1>Join our book club!</h1>
                                     <p>Discuss a new book every week with other club members.</p>
-                                    <a class="read_more conatct_btn" href="{% url 'login' %}" role="button">Sign In</a>
+                                    <a class="read_more conatct_btn" href="{% url 'signin' %}" role="button">Sign In</a>
                                  </div>
                               </div>
                            </div>
