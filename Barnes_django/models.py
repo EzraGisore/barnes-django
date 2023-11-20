@@ -39,3 +39,10 @@ class AcMember(models.Model):
 def __str__(self):
     return self.name
 
+class Book(models.Model):
+    Title = models.CharField(max_length=50)
+    image = models.ImageField(upload_to='uploads/images', null=False, blank=False, default="hjhjh")
+    description = models.TextField(null=False, blank=False)
+
+    def __str__(self):
+        return self.name

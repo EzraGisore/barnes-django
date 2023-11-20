@@ -222,6 +222,6 @@ def activate(request, uidb64, token):
         user.is_active = True
         user.save()
         ##return HttpResponse('Thank you for your email confirmation. Now you can login your account.')
-        return render(request, "signin.html")
+        return render(request, "MembershipPay.html")
     else:
         return HttpResponse('Activation link is invalid!')
